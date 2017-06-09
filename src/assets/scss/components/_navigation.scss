@@ -1,7 +1,8 @@
 .top-bar {
 	.top-bar__main-logo {
 		height: 100%;
-		img {
+		object, img {
+			height: 100%;
 			width: 90%;
 		}
 	}
@@ -54,21 +55,20 @@
 	}
 
 	&__icon {
-		font-size: 2em;
-		transform: translate(0, -10px);
+		font-size: 3em;
+		transform: translate(0, -10px) scale(.7);
 		transition: transform .3s ease-out;
 
 		.item:hover & {
 			margin-top: 0;
-			font-size: 3em;
-			transform: rotate3d(0,2,0,180deg);
+			transform: rotate3d(0,1,0,180deg) scale(1);
 			transition: .3s ease-in;
 		}
 	}
 
 	&__name {
 		line-height: 0;
-		transform: translate(0, 10px);
+		transform: translate(0, 4px);
 		transition: transform .3s ease-out;
 
 		.item:hover & {
