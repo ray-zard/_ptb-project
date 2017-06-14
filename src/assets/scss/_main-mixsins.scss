@@ -1,0 +1,27 @@
+@mixin g-wrapper {
+	max-width: 75rem;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.g-wrapper {
+	@include g-wrapper;
+}
+
+@mixin bghover($color, $mod, $value) {
+	background-color: $color;
+	transition: .25s ease-in;
+	@if $mod == "darken" {
+		&:hover {
+			background-color: darken($color, $value);
+			transition: .25s ease-in;
+		}
+	} @if $mod == "lighten" {
+		&:hover {
+			background-color: lighten($color, $value);
+			transition: .25s ease-in;
+		}
+	}
+}

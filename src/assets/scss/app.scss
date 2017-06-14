@@ -28,7 +28,7 @@
 // @include foundation-label;
 // @include foundation-media-object;
 // @include foundation-off-canvas;
-// @include foundation-orbit;
+@include foundation-orbit;
 // @include foundation-pagination;
 // @include foundation-progress-bar;
 // // @include foundation-progress-element;
@@ -38,7 +38,7 @@
 // @include foundation-reveal;
 // @include foundation-switch;
 // @include foundation-table;
-// @include foundation-tabs;
+@include foundation-tabs;
 // @include foundation-thumbnail;
 // @include foundation-title-bar;
 // @include foundation-tooltip;
@@ -51,6 +51,8 @@
 @include motion-ui-animations;
 
 @import 'main-settings';
+@import 'main-mixsins';
 @import 'components/fonts';
 @import 'components/navigation';
 @import 'components/i-header';
+@import 'components/footer';

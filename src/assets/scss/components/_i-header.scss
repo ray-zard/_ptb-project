@@ -1,0 +1,95 @@
+.index-header {
+
+	&__nav {
+		flex: 0 1 auto;
+		max-width: 300px;
+		padding-right: 0;
+		.tabs {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			border-right: 0;
+			min-height: 512px;
+			.tabs-title {
+				display: flex;
+				flex-grow: 1;
+				border-bottom: 1px solid #e6e6e6;
+				a[aria-selected='true'], a:focus {
+					color: $white;
+					background-color: $main-color;
+					&:hover {
+					color: $white;
+					background-color: $main-color;
+					}
+				}
+				a:hover {
+					color: $main-black;
+					background-color: $main-light-silver;
+				}
+			}
+			:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+
+	&__content {
+		padding-left: 0;
+
+		.tabs-content {
+			height: 100%;
+
+			.tabs-panel {
+				&[aria-hidden="false"] {
+					display: flex;
+					align-items: flex-end;
+				}
+
+				&__wrapper {
+					padding: 2em 2.6em;
+					position: relative;
+					text-align: right;
+					z-index: 1;
+					h1 {
+						font-weight: 700;
+						text-transform: uppercase;
+					}
+					.button {
+						padding: 0.6em 1em;
+						color: #000;
+						background-color: azure;
+						line-height: 1;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.tabs-title {
+	a {
+		font-size: 1em;
+		font-weight: 400;
+		color: $main-black;
+	}
+}
+
+.tabs-content {
+	border: 0;
+}
+
+.tabs-panel {
+	height: 100%;
+	padding: 0;
+	position: relative;
+
+	img {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0; right: 0;
+		object-fit: cover;
+	}
+}
