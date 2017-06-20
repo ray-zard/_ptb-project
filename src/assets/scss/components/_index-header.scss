@@ -3,6 +3,61 @@
 }
 
 .header {
+	position: relative;
+
+	&__slide {
+		height: 50vh;
+	}
+
+	&__img {
+		position: absolute;
+		object-fit: cover;
+		object-position: 50% 50%;
+		width: inherit;
+	}
+
+	&__content {
+		align-self: flex-end;
+		line-height: 1.2;
+		width: 50em;
+		padding: 2rem;
+	}
+
+	&__header-txt, &__con-text {
+		display: block;
+		position: relative;
+		z-index: 1;
+
+		color: $white;
+	}
+
+	&__header-txt {
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 2.4em;
+		margin-bottom: 0.3em;
+	}
+
+	&__con-text {
+		font-size: 1.2em;
+		margin-bottom: 0.8em;
+	}
+
+	&__button-next {
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+
+		padding: 0.8em 1em;
+		color: $white;
+		background-color: #0083bd;
+	}
+
+	.slick-slide {
+		display: flex;
+		align-items: flex-end;
+		user-select: text;
+	}
 }
 
 

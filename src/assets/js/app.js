@@ -5,7 +5,8 @@ $(document).ready(function () {
     autoplay: true,
     speed: 300,
     autoplaySpeed: 5000,
-    arrows: false
+    arrows: false,
+    swipe: false
   });
 
   // Остановка карусели при на вделении на кнопку
@@ -34,6 +35,6 @@ $(document).ready(function () {
     var currentSlide = $(this).slick('slickCurrentSlide');
     $("button[data-slide]").removeClass("active");
     $("button[data-slide]:nth-child("+(currentSlide + 1)+")").addClass("active");
-});
+  });
 
 });
