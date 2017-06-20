@@ -10,6 +10,10 @@
 	@include g-wrapper;
 }
 
+* {
+	outline: none;
+}
+
 @mixin bghover($color, $mod, $value) {
 	background-color: $color;
 	transition: .25s ease-in;

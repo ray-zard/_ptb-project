@@ -5,8 +5,33 @@
 .header {
 	position: relative;
 
+
 	&__slide {
+		position: relative;
 		height: 50vh;
+
+		&::before {
+			display: block;
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4d4d4d+0,b3b3b3+100 */
+			background: #4d4d4d; /* Old browsers */
+			background: -moz-linear-gradient(left,  #1a1a1a 0%, #4d4d4d 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left,  #1a1a1a 0%,#4d4d4d 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right,  #1a1a1a 0%,#4d4d4d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d4d4d', endColorstr='#b3b3b3',GradientType=1 ); /* IE6-9 */
+
+			opacity: 0.75;
+			z-index: 1;
+		}
+	}
+
+	&__filter {
 	}
 
 	&__img {
@@ -48,15 +73,35 @@
 		position: relative;
 		z-index: 1;
 
-		padding: 0.8em 1em;
 		color: $white;
-		background-color: #0083bd;
 	}
 
 	.slick-slide {
 		display: flex;
 		align-items: flex-end;
 		user-select: text;
+	}
+}
+
+
+
+.button-next {
+	display: inline-flex;
+	align-items: center;
+	background-color: #0083bd;
+	&__text {
+		font-weight: bold;
+		padding: 0 1rem;
+		font-size: 1.2em;
+	}
+	&__icon {
+		font-size: 1.4em;
+		color: #9c9b9b;
+		background-color: $white;
+		padding: 0.6em;
+	}
+	&:hover, &:focus {
+		color: $white;
 	}
 }
 
@@ -75,14 +120,16 @@
 		display: flex;
 		flex-direction: column;
 		cursor: pointer;
+		color: #333333;
 		background-color: #f2f2f2;
 		padding: 1em;
 		text-align: left;
 		outline: none;
-		transition: .25s ease-out;
+		transition: background-color .25s ease-out;
 
 		&:hover {
-			background-color: #e6e6e6;
+			color: black;
+			background-color: #cccccc;
 			transition: .25s ease-in;
 		}
 
@@ -90,6 +137,7 @@
 			cursor: default;
 			color: $white;
 			background-color: #0083bd;
+			transition: background-color .25s ease-in;
 		}
 	}
 
