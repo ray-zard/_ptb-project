@@ -1,0 +1,102 @@
+.index-content__header {
+	width: 100%;
+}
+
+.header {
+}
+
+
+// = Стили навигации `header` = //
+
+.header-navigation {
+	display: flex;
+	min-heigth: 300px;
+
+	:last-child {
+		margin-bottom: 0
+	}
+
+	&__nav-item {
+		display: flex;
+		flex-direction: column;
+		cursor: pointer;
+		background-color: #f2f2f2;
+		padding: 1em;
+		text-align: left;
+		outline: none;
+		transition: .25s ease-out;
+
+		&:hover {
+			background-color: #e6e6e6;
+			transition: .25s ease-in;
+		}
+
+		&.active {
+			cursor: default;
+			color: $white;
+			background-color: #0083bd;
+		}
+	}
+
+	&__header {
+		display: block;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom: 0.6em;
+		line-height: 1.4;
+	}
+
+	&__content {
+		line-height: 1.2
+	}
+}
+
+.header-navigation {
+
+	:last-child {
+		::after {
+			display: none;
+		}
+	}
+	:first-child {
+		::before {
+			display: none;
+		}
+	}
+
+}
+
+.header-navigation__nav-item {
+	position: relative;
+
+	::before {
+		position: absolute;
+		content: "";
+		width: 2px;
+		background-color: #999;
+		top: 50%;
+		transform: translateY(-50%);
+		bottom: 0;
+		left: -1px;
+		height: 80%;
+	}
+
+	::after {
+		position: absolute;
+		content: "";
+		width: 2px;
+		background-color: #999;
+		top: 50%;
+		transform: translateY(-50%);
+		bottom: 0;
+		right: -1px;
+		height: 80%;
+	}
+
+	&:hover {
+
+	}
+}
+
+
+	
