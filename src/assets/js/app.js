@@ -37,4 +37,35 @@ $(document).ready(function () {
     $("button[data-slide]:nth-child("+(currentSlide + 1)+")").addClass("active");
   });
 
+  $('#clients').ready(function() {
+
+    $('.logo-line').children().each(function(index) {
+
+      let objectPosition = 0;
+
+      for (let i = 0; i <= index; i++) {
+        $(this).css('object-position', (objectPosition + 'px'));
+        objectPosition -= 192;
+      };
+
+    });
+
+    // console.log();
+
+    $('.logo-line').slick({
+      arrows: false,
+      autoplay: true,
+      speed: 1250,
+      autoplaySpeed: 1000,
+      infinite: true,
+      centerMode: true,
+      slidesToShow: 5,
+      variableWidth: true,
+      draggable: false,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+    });
+
+});
+
 });
