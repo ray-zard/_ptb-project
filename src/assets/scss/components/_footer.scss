@@ -1,0 +1,114 @@
+.footer {
+	background-color: $main-light-silver;
+	padding: 1.6em 0;
+
+	&__sub-footer {
+		background-color: $main-color;
+		padding: 0.4em 0;
+		text-align: center;
+		font-weight: bold;
+		color: $main-light-silver;
+
+		small {
+			font-weight: normal;
+		}
+	}
+
+	&__services, 
+	&__contacts,
+	&__feedback {
+		flex: 1 1 0;
+		padding: 0 2em;
+	}
+
+	&__feedback {
+		flex: 1 1 200px;
+	}
+
+	&__header {
+		display: block;
+		font-size: 1.6em;
+		font-weight: bold;
+		color: $main-color;
+		margin-bottom: 0.6em;
+		line-height: 1.2;
+	}
+
+	&__nav-menu {
+		margin: 0;
+		margin-bottom: 1.2em;
+		padding: 0;
+		list-style-type: none;
+	}
+}
+
+.nav-menu {
+	&__item {
+		color: $main-dark;
+		font-weight: bold;
+		text-transform: uppercase;
+		&:hover {
+			color: $main-dark-gray;
+		}
+	}
+}
+
+.feedback {
+	position: relative;
+
+	&__info {
+		line-height: 1.2;
+	}
+	
+	&__btn {
+		font-weight: bold;
+		padding: 0.6em 1em;
+		background-color: $main-color;
+		color: $white;
+		cursor: pointer;
+		&:hover {
+			background-color: darken($main-color, 10%);
+		}
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 2px;
+		background-color: $main-light-gray;
+		z-index: 100;
+	}
+
+	&::before {
+		left: 0;
+	}
+
+	&::after {
+		right: 0;
+	}
+
+}
+
+.contacts {
+
+	&__sub-header,
+	&__add-content {
+		display: block;
+		margin-bottom: 0.2em;
+	}
+
+	&__sub-header {
+		font-weight: bold;
+		color: $main-dark;
+	}
+
+	&__add-content {
+		line-height: 1.2;
+		padding: 0.2em 0.4em;
+		background-color: $white;
+		margin-bottom: 0.6em;
+	}
+}
