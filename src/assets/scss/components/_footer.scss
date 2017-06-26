@@ -17,13 +17,21 @@
 	&__services, 
 	&__contacts,
 	&__feedback {
-		flex: 1 1 0;
 		padding: 0 2em;
 	}
 
-	&__feedback {
-		flex: 1 1 200px;
+	&__services {
+		flex: 2 1 0;
 	}
+
+	&__feedback {
+		flex: 4 1 0;
+	}
+ 
+	&__contacts {
+		flex: 3 1 0;
+	}
+
 
 	&__header {
 		display: block;
@@ -107,7 +115,7 @@
 
 	&__add-content {
 		line-height: 1.2;
-		padding: 0.2em 0.4em;
+		padding: 0.4em 0.6em;
 		background-color: $white;
 		margin-bottom: 0.6em;
 	}
