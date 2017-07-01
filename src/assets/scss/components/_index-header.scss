@@ -1,9 +1,10 @@
-.index-content__header {
+.index-content__index-header,
+.page-content__header {
 	width: 100%;
 	margin-bottom: 3em;
 }
 
-.header {
+.index-header {
 	position: relative;
 
 
@@ -49,11 +50,11 @@
 		padding: 2rem;
 	}
 
-	&__header-txt, &__con-text {
+	&__header-txt,
+	&__con-text {
 		display: block;
 		position: relative;
 		z-index: 1;
-
 		color: $white;
 	}
 

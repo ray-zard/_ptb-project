@@ -18,12 +18,12 @@
 	background-color: $color;
 	transition: .25s ease-in;
 	@if $mod == "darken" {
-		&:hover {
+		& a:hover {
 			background-color: darken($color, $value);
 			transition: .25s ease-in;
 		}
 	} @if $mod == "lighten" {
-		&:hover {
+		& a:hover {
 			background-color: lighten($color, $value);
 			transition: .25s ease-in;
 		}
